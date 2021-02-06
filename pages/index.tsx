@@ -1,7 +1,14 @@
 import Head from 'next/head'
+// import axios from 'axios';
 import styles from '../styles/Home.module.css'
+import * as React from 'react';
 
-export default function Home() {
+
+interface HomeProps {
+}
+
+const Home: React.FC<HomeProps> = (props: HomeProps) => {
+  
   return (
     <div className={styles.container}>
       <Head>
@@ -15,8 +22,6 @@ export default function Home() {
         </h1>
 
         <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
         </p>
 
         <div className={styles.grid}>
@@ -63,3 +68,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;
